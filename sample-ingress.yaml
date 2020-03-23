@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: sample-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: prototip-1
+spec:
+  rules:
+    - host: prototip-1.kirisaki.dev
+      http:
+        paths:
+        - path: /
+          backend:
+            serviceName: sample-service
+            servicePort: 8080
