@@ -4,6 +4,7 @@ metadata:
   name: sample-ingress
   annotations:
     kubernetes.io/ingress.global-static-ip-name: prototip-1
+    networking.gke.io/managed-certificates: sample-cert
 spec:
   rules:
     - host: prototip-1.kirisaki.dev
